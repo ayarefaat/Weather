@@ -36,7 +36,7 @@ function displayToday(data,location){
                     <span>${todayNum} ${month}</span>
                     </div>
                     <div class="weather-info">
-                    <h6 class="fw-normal mb-0">${location.name}</h6>
+                    <h6 class="fw-normal mb-0">${location.name} / ${location.country}</h6>
                     <div class="temp">
                         <p class="text-white degree mb-0 fw-bolder">${data.temp_c}<span>o</span>c</p>
                         <img src=${data.condition.icon} alt="partly cloudy">

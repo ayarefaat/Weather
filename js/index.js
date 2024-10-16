@@ -1,8 +1,6 @@
 //* HTML Variables
 let searchInput=document.querySelector('form input');
 let weatherContainer =document.querySelector('.row');
-// let tomorrowWeather=document.querySelector('.tomorrow-forecast');
-// let dayAfterWeather=document.querySelector('.day-after-forecast');
 console.log(weatherContainer)
 let days=["Monday","Tuesday","Wednesday","Thursday","Friday",'Saturday',"Sunday"];
 let months=["Januanry" ,"Febraury","March","April","May","June","July","August","September","October","November","December"];
@@ -14,7 +12,6 @@ async function getWeather(country){
         let weatherData= await response.json();
         console.log(weatherData)
         await displayToday(weatherData.current,weatherData.location);
-        // await displayTomorrow(weatherData.forecast.forecastday[1]);
         await displayDayAfter(weatherData.forecast.forecastday);
     }
 }

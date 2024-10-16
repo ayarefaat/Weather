@@ -10,7 +10,6 @@ span{
     display: inline-block;
 }
 section{ 
-    /* height: 100vh; */
     nav{
         height: 15%;
         background-color: var(--main-color);

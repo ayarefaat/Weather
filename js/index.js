@@ -92,7 +92,7 @@ function getUserLocation(){
     let userLocation=navigator.geolocation.getCurrentPosition((location)=>{
         let longitude=location.coords.longitude;
         let latitude=location.coords.latitude;
-        let address=longitude+','+latitude;
+        let address=latitude+','+longitude;
         getWeather(address);
         console.log(address,location)
     });

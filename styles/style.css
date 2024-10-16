@@ -1,0 +1,219 @@
+:root{
+    --main-color:#1e202b;
+    --sec-color:#009ad8;
+    --main-font:"Roboto", sans-serif;
+}
+a{
+    color: inherit !important;
+}
+span{
+    display: inline-block;
+}
+section{ 
+    /* height: 100vh; */
+    nav{
+        height: 15%;
+        background-color: var(--main-color);
+        div.logo{
+            a{
+                img{
+                    width: 60px;
+                }
+            }
+            h1{
+                font-size: 16px;
+            }
+            span{
+                font-size: 0.7rem;
+                color: #bfc1c8;
+            }
+        }
+        ul{
+            font-size: 14px;
+            li.nav-item{
+                a.nav-link{
+                    border: 2px solid transparent;
+                    transition: color  0.4s ease,border 0.4s ease;
+                    -webkit-transition: color  0.4s ease,border 0.4s ease;
+                    -moz-transition: color  0.4s ease,border 0.4s ease;
+                    -ms-transition: color  0.4s ease,border 0.4s ease;
+                    -o-transition: color  0.4s ease,border 0.4s ease;
+                    &.active{
+                        border-color:var(--sec-color);
+                        color: var(--sec-color) !important;
+                    }
+                    &:hover{
+                        border-color: var(--sec-color);
+                        color: var(--sec-color) !important;
+                    }
+                }
+            }
+        }
+    }
+    div.forcast{
+        background-color: var(--main-color);
+        background-image: url('../imgs/banner.png') ;
+        height: 100vj;
+        background-repeat: no-repeat;
+        font-family: var(--main-font);
+        form{
+            input{
+                background-color: var(--main-color);
+                color: #bfc1c8;
+                &::placeholder{
+                    color:#bfc1c8 ;
+                }
+                &:focus{
+                    background-color: var(--main-color);
+                    box-shadow: none;
+                    color:#bfc1c8 ;
+                }
+            }
+            button{
+                background-color: var(--sec-color);
+                top: 5px;
+                bottom: 5px;
+                right: 5px;
+                padding: 0 35px;
+                &:hover{
+                    background-color: var(--sec-color);
+                }
+            }
+        }
+        .row{
+            /* height: 380px; */
+            color: #bfc1c8;
+            overflow: hidden;
+            .temp{
+                p{
+                    &:first-child{
+                        font-size: 24px;
+                        span{
+                            vertical-align: super;
+                            font-size: 18px;
+                        }
+                    }
+                    &:nth-child(2){
+                        span{
+                            font-size: 12px;
+                            vertical-align: super;
+                        }
+                    }
+                    &:last-child{
+                        font-size: 14px;
+                        color: var(--sec-color);
+                    }
+                }
+            }
+            .item:nth-child(odd){
+                .today,.after-tomorrow{
+                    background-color: var(--main-color);
+                    padding: 10PX;
+                    border-top-left-radius: 10px;
+                }
+                .after-tomorrow{
+                    background-color: #2d303d;
+                    border-top-left-radius: 0px;
+                }
+                .weather-after-tomorrow{
+                    background-color: #323544;
+                    border-bottom-right-radius: 10px;
+                    height: 358px;
+                }
+                .weather-info{
+                    background-color: #323544;
+                    border-bottom-left-radius: 10px;
+                    padding: 30px 20px;
+                    h6{
+                        font-size: 18px;
+                    }p.degree{
+                        font-size: 90px;
+                        span{
+                            vertical-align: super;
+                            font-size: 60px;
+                        }
+                        &.weather-desc{
+                            font-size: 14px;
+                            font-weight: 300;
+                            color: var(--sec-color);
+                        }
+                    }
+                }
+                .data{
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .item:nth-child(even){
+               
+                .after-tomorrow{
+                    background-color: #222530;
+                    padding: 10px;
+                }
+                .weather-after-tomorrow{
+                    background-color: #262936;
+                    height: 358px;
+                    
+                }
+
+            }
+        }
+    }
+}
+footer{
+    background-color: #262936;
+    font-family: var(--main-font);
+    .row{
+        .item{
+            color: #bfc1c8;
+            form{
+                input{
+                    background-color: var(--main-color);
+                    color: #bfc1c8;
+                    &::placeholder{
+                        color:#bfc1c8 ;
+                    }
+                    &:focus{
+                        background-color: var(--main-color);
+                        box-shadow: none;
+                        color:#bfc1c8 ;
+                    }
+                }
+                button{
+                    background-color: var(--sec-color);
+                    top: 5px;
+                    bottom: 5px;
+                    right: 5px;
+                    padding: 0 35px;
+                    &:hover{
+                        background-color: var(--sec-color);
+                    }
+                }
+            }
+            p{
+                font-size: 14px;
+            }
+            .social{
+                span{
+                    width: 40px;
+                    height: 40px;
+                    line-height:40px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    background-color: #1e202b;
+                    color: var(--sec-color);
+                    transition:background-color 0.4s ease ;
+                    -webkit-transition:background-color 0.4s ease ;
+                    -moz-transition:background-color 0.4s ease ;
+                    -ms-transition:background-color 0.4s ease ;
+                    -o-transition:background-color 0.4s ease ;
+                    &:hover{
+                        background-color: var(--sec-color);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

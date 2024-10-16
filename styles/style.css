@@ -52,7 +52,8 @@ section{
     div.forcast{
         background-color: var(--main-color);
         background-image: url('../imgs/banner.png') ;
-        height: 100vj;
+        height: 100vh;
+        border-bottom-left-radius: 10px;
         background-repeat: no-repeat;
         font-family: var(--main-font);
         form{
@@ -80,9 +81,12 @@ section{
             }
         }
         .row{
-            /* height: 380px; */
+            height: 420px;
+            overflow: hidden;
             color: #bfc1c8;
             overflow: hidden;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
             .temp{
                 p{
                     &:first-child{
@@ -113,15 +117,14 @@ section{
                 .after-tomorrow{
                     background-color: #2d303d;
                     border-top-left-radius: 0px;
+                    border-top-right-radius: 10px;
                 }
                 .weather-after-tomorrow{
                     background-color: #323544;
-                    border-bottom-right-radius: 10px;
-                    height: 358px;
+                    height: 100%;
                 }
                 .weather-info{
                     background-color: #323544;
-                    border-bottom-left-radius: 10px;
                     padding: 30px 20px;
                     h6{
                         font-size: 18px;
@@ -152,7 +155,7 @@ section{
                 }
                 .weather-after-tomorrow{
                     background-color: #262936;
-                    height: 358px;
+                    height: 100%;
                     
                 }
 

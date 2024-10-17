@@ -48,7 +48,7 @@ function displayToday(data,location){
                         <span class="me-1"><i class="fa-solid fa-umbrella"></i></span> ${data.precip_in}%
                         </p>
                         <p class="me-3">
-                        <span class="me-1"><i class="fa-solid fa-wind"></i></span> ${data.wind_degree} km/h
+                        <span class="me-1"><i class="fa-solid fa-wind"></i></span> ${data.wind_kph} km/h
                         </p>
                         <p class="me-3">
                         <span class="me-1"><i class="fa-regular fa-compass"></i></span> ${data.wind_dir}

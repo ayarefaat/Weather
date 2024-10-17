@@ -28,7 +28,7 @@ function displayToday(data,location){
     let todayName=days[todayDate.getDay()-1];
     let month=months[todayDate.getMonth()];
     let todayNum=todayDate.getDate();
-    console.log(todayName)
+    console.log(todayName ,data , location)
     let today=`
     <div class="item col-lg-4 col-md-12 p-0">
         <div class="today d-flex justify-content-between">
@@ -37,6 +37,7 @@ function displayToday(data,location){
                     </div>
                     <div class="weather-info">
                     <h6 class="fw-normal mb-0">${location.name} / ${location.country}</h6>
+                    <p class="mt-1">"${location.region}"</p>
                     <div class="temp">
                         <p class="text-white degree mb-0 fw-bolder">${data.temp_c}<span>o</span>c</p>
                         <img src=${data.condition.icon} alt="partly cloudy">
@@ -44,13 +45,13 @@ function displayToday(data,location){
                     </div>
                     <div class="data d-flex ">
                         <p class="me-3">
-                        <span class="me-1"><i class="fa-solid fa-umbrella"></i></span> 20%
+                        <span class="me-1"><i class="fa-solid fa-umbrella"></i></span> ${data.precip_in}%
                         </p>
                         <p class="me-3">
-                        <span class="me-1"><i class="fa-solid fa-wind"></i></span> 18km/h
+                        <span class="me-1"><i class="fa-solid fa-wind"></i></span> ${data.wind_degree} km/h
                         </p>
                         <p class="me-3">
-                        <span class="me-1"><i class="fa-regular fa-compass"></i></span> East
+                        <span class="me-1"><i class="fa-regular fa-compass"></i></span> ${data.wind_dir}
                         </p>
                     </div>
                     </div>

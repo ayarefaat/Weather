@@ -52,7 +52,6 @@ section{
     div.forcast{
         background-color: var(--main-color);
         background-image: url('../imgs/banner.png') ;
-        height: 100vh;
         border-bottom-left-radius: 10px;
         background-repeat: no-repeat;
         font-family: var(--main-font);
@@ -81,7 +80,6 @@ section{
             }
         }
         .row{
-            height: 420px;
             overflow: hidden;
             color: #bfc1c8;
             overflow: hidden;
@@ -121,11 +119,14 @@ section{
                 }
                 .weather-after-tomorrow{
                     background-color: #323544;
-                    height: 100%;
+                    height: 25rem;
+                    border-bottom-right-radius: 10px;
                 }
                 .weather-info{
                     background-color: #323544;
+                    height: 400px;
                     padding: 30px 20px;
+                    border-bottom-left-radius: 10px;
                     h6{
                         font-size: 18px;
                     }p.degree{
@@ -155,8 +156,7 @@ section{
                 }
                 .weather-after-tomorrow{
                     background-color: #262936;
-                    height: 100%;
-                    
+                    height: 400px;                    
                 }
 
             }

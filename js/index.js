@@ -2,7 +2,7 @@
 let searchInput=document.querySelector('form input');
 let weatherContainer =document.querySelector('.row');
 console.log(weatherContainer)
-let days=["Monday","Tuesday","Wednesday","Thursday","Friday",'Saturday',"Sunday"];
+let days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",'Saturday'];
 let months=["Januanry" ,"Febraury","March","April","May","June","July","August","September","October","November","December"];
 
 async function getWeather(country){
@@ -25,10 +25,10 @@ searchInput.addEventListener('keyup',(e)=>{
 
 function displayToday(data,location){
     todayDate=new Date(data.last_updated);
-    let todayName=days[todayDate.getDay()-1];
+    let todayName=days[todayDate.getDay()];
     let month=months[todayDate.getMonth()];
     let todayNum=todayDate.getDate();
-    console.log(todayName ,data , location)
+    console.log(todayName ,todayDate.getDay(),data , location)
     let today=`
     <div class="item col-lg-4 col-md-12 p-0">
         <div class="today d-flex justify-content-between">
@@ -64,7 +64,7 @@ function displayToday(data,location){
 function displayDayAfter(data){
     let day='';
     for(let i=1;i<data.length;i++){
-        let dayName=days[new Date(data[i].date).getDay()-1];
+        let dayName=days[new Date(data[i].date).getDay()];
         console.log(dayName)
             day=`
             <div class="item col-lg-4 col-md-12 p-0">
